@@ -34,3 +34,6 @@ mykernel.iso: mykernel.bin
 
 install: mykernel.bin
 	sudo cp $< /boot/mykernel.bin
+
+clean:
+	rm -rf *.o mykernel.bin mykernel.iso
