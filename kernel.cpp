@@ -9,7 +9,8 @@
 
 \Copyright (C) 2023 - All rights reserved.
 *******************************************************************************/
-#include <Types.h>
+#include "Types.h"
+#include "gdt.h"
 /**
  * Display the character in the console
  *
@@ -34,6 +35,8 @@ extern "C" void callConstructors() {
 extern "C" void kernelMain(const void *multiboot_structure,
                            uint32_t /*multiboot_magic*/) {
   printf("[Oussama BOUKSIM] Hello World!");
-  while (1)
-    ;
+
+  GlobalDescriptorTable gdt;
+
+  while(1);
 }

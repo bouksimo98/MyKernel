@@ -1,11 +1,30 @@
+/******************************************************************************
+\Project MyKernel (Writing my own OS)
+
+\Author : Oussama BOUKSIM
+
+\File : gdt.h
+
+\Creation date : 12/02/2023
+
+\Copyright (C) 2023 - All rights reserved.
+*******************************************************************************/
 #ifndef __GDT_H
 #define __GDT_H
 
-#include <Types.h>
+#include "Types.h"
+
+/*
+  -------------------------------------------------------------------------
+  |        |Fl || Li|        |                          |                 |
+  |  Base  |ag || mi|  Type  |           Base           |      Limit      |
+  |        |s  || t |        |                          |                 |
+  |--------|--------|--------|--------|--------|--------|--------|--------|
+
+*/
+
 
 class GlobalDescriptorTable {
-private:
-  /* data */
 public:
   class SegmentDescriptor {
   private:
